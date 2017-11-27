@@ -23,7 +23,7 @@ void CGLFramework::Initialize(int argc, char * argv[], int width, int height, in
 	glutInitWindowPosition(x, y); // 윈도우의 위치지정
 	glutCreateWindow(caption); // 윈도우 생성 (윈도우 이름)
 	srand(time(NULL));
-	
+
 	m_CurrScene = new MainScene{};
 	m_CurrScene->initialize();
 }
@@ -53,9 +53,9 @@ void CGLFramework::Reshape(int w, int h)
 	glMatrixMode(GL_PROJECTION);
 
 	glLoadIdentity();
-	gluPerspective(60.0f, (double)w / (double)h, 1, 2000);
+	gluPerspective(60.0f, (double)w / (double)h, 1, 4000);
 
-	glTranslatef(-CameraX, -CameraY, -1000 + CameraZ);
+	glTranslatef(-CameraX, -CameraY, -2000 + CameraZ);
 	glRotatef(CameraRotateDegreeX, 1, 0, 0);
 	glRotatef(CameraRotateDegreeY, 0, 1, 0);
 	glRotatef(CameraRotateDegreeZ, 0, 0, 1);
@@ -164,4 +164,12 @@ void CGLFramework::MousePassiveMotion(int x, int y)
 {
 	if (m_CurrScene) m_CurrScene->MousePassiveMotion(x, y);
 	glutPostRedisplay();
+}
+
+void CGLFramework::ChangeScene(CScene * newScene)
+{
+	CameraReset();
+	auto old = m_CurrScene;
+	m_CurrScene = newScene;
+	delete old;
 }

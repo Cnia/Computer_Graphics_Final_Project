@@ -1,11 +1,2 @@
-﻿  pch.cpp
-  main.cpp
-c:\computer_graphics_final_project\multiverse\computergraphics_framework\glframework.h(90): warning C4150: deletion of pointer to incomplete type 'CScene'; no destructor called
-  c:\computer_graphics_final_project\multiverse\computergraphics_framework\glframework.h(5): note: see declaration of 'CScene'
-  Scene.cpp
-  Practice30.cpp
-  MainScene.cpp
-  GLFramework.cpp
-  Generating Code...
-pch.obj : error LNK2005: "void __cdecl TextPrint(char *,double,struct RGB)" (?TextPrint@@YAXPADNURGB@@@Z) already defined in MainScene.obj
-C:\Computer_Graphics_Final_Project\Multiverse\Debug\ComputerGraphics_FrameWork.exe : fatal error LNK1169: one or more multiply defined symbols found
+﻿  MainScene.cpp
+  ComputerGraphics_FrameWork.vcxproj -> C:\Computer_Graphics_Final_Project\Multiverse\Debug\ComputerGraphics_FrameWork.exe

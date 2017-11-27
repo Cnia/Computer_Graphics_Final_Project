@@ -82,13 +82,7 @@ public:
 		glutMotionFunc(fnMouseMotion);
 	}
 
-	void ChangeScene(CScene* newScene)
-	{
-		CameraReset();
-		auto old = m_CurrScene;
-		m_CurrScene = newScene;
-		delete old;
-	}
+	void ChangeScene(CScene* newScene);
 
 private:
 	DrawFunc	fnDraw{ nullptr };

@@ -22,7 +22,7 @@ void MainScene::Render()
 	textColor.g = 0;
 	textColor.b = 0;
 
-	TextPrint("ABC", 100, textColor);
+	TextPrint("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 50, textColor);
 }
 
 void MainScene::Reshape(int w, int h)
