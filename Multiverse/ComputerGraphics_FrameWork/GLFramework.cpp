@@ -3,6 +3,7 @@
 #include "Scene.h"
 #include "MainScene.h"
 #include "Practice30.h"
+#include "EndingCreditScene.h"
 
 #include "GLFramework.h"
 
@@ -138,9 +139,8 @@ void CGLFramework::SpecialKeyboard(int key, int x, int y)
 {
 	switch (key)
 	{
-	case GLUT_KEY_F10:
-		ChangeScene(new CPractice30{});
-		m_CurrScene->initialize();
+	case GLUT_KEY_F1:
+		ChangeScene(new EndingCreditScene{});
 		break;
 	default:
 		if (m_CurrScene) m_CurrScene->SpecialKeyboard(key, x, y);
@@ -171,5 +171,6 @@ void CGLFramework::ChangeScene(CScene * newScene)
 	CameraReset();
 	auto old = m_CurrScene;
 	m_CurrScene = newScene;
+	m_CurrScene->initialize();
 	delete old;
 }

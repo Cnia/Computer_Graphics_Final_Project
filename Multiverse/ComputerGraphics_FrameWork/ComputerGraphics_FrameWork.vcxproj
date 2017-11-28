@@ -142,13 +142,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EndingCreditScene.h" />
     <ClInclude Include="GLFramework.h" />
     <ClInclude Include="MainScene.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Practice30.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="TextFunction.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EndingCreditScene.cpp" />
     <ClCompile Include="GLFramework.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainScene.cpp" />
@@ -160,6 +163,7 @@
     </ClCompile>
     <ClCompile Include="Practice30.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="TextFunction.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

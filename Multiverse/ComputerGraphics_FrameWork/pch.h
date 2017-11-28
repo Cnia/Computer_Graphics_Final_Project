@@ -16,8 +16,6 @@
 
 #define Radian 0.017453292519943
 
-#define TextFileWordNum 67
-
 struct RGB {
 	GLdouble r, g, b;
 };
@@ -26,5 +24,3 @@ struct WordData {
 	GLint word[12][9];
 	GLdouble width;
 };
-
-void TextPrint(char Text[], GLdouble WordSize, RGB TextColor);
